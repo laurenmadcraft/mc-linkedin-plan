@@ -179,6 +179,31 @@
     .day60 ul { columns: 1; }
     section { padding: 64px 0; }
   }
+
+  .pill { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 8px; margin-bottom: 10px; }
+  .p1 { background: var(--pink); color: var(--white); }
+  .p2 { background: var(--navy); color: var(--white); }
+  .bl { background: var(--mist); color: var(--slate); border: 1px solid var(--line); }
+  .targets-big { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); background: var(--white); margin-bottom: 20px; }
+  .targets-big div { padding: 24px; }
+  .targets-big div + div { border-left: 1px solid var(--line); }
+  .targets-big b { display: block; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; color: var(--navy); }
+  .targets-big span { font-size: 15px; color: var(--slate); }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .box { background: var(--white); border: 1px solid var(--line); padding: 26px; }
+  .box h3 { margin-bottom: 12px; }
+  .box ul { padding-left: 18px; }
+  .box li { font-size: 15.5px; margin-bottom: 8px; }
+  .box li::marker { color: var(--pink); }
+  .decisions { counter-reset: d; display: grid; gap: 16px; }
+  .decision { background: var(--white); border: 1px solid var(--line); padding: 22px 26px 22px 72px; position: relative; }
+  .decision::before { counter-increment: d; content: counter(d); position: absolute; left: 24px; top: 20px; width: 30px; height: 30px; background: var(--navy); color: var(--white); display: grid; place-items: center; font-weight: 600; }
+  .decision h3 { font-size: 17px; margin-bottom: 6px; }
+  .decision p { font-size: 15.5px; color: var(--slate); }
+  .decision p b { color: var(--pink); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 1000px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) { .grid-4 { grid-template-columns: 1fr; } .targets-big, .grid-2 { grid-template-columns: 1fr; } .targets-big div + div { border-left: none; border-top: 1px solid var(--line); } }
 </style>
 </head>
 <body>
@@ -187,99 +212,66 @@
   <div class="wrap">
     <a class="logo" href="#top">Mad<span>craft</span> 2.0</a>
     <nav class="links">
-      <a href="#glance">At a glance</a>
-      <a href="#run">What we run</a>
-      <a href="#ads">Example ads</a>
-      <a href="#plan30">30 days</a>
-      <a href="#plan90">90 days</a>
       <a href="#targets">Targets</a>
-      <a href="#asks">Asks</a>
+      <a href="#map">Offer map</a>
+      <a href="#ads">Example ads</a>
+      <a href="#plan">30 / 60 / 90</a>
+      <a href="#measure">Measurement</a>
+      <a href="#owners">Ownership</a>
+      <a href="#decisions">Decisions</a>
     </nav>
   </div>
 </header>
 
 <div class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">MC | Madcraft 2.0 LinkedIn 30 + 90 Day Plan | Nov 2026</div>
-    <h1>Get seen by the right people. Bring the warm ones back to book a call.</h1>
-    <p class="lead">LinkedIn gets Madcraft in front of decision-makers at our named Texas and Sun Belt accounts, then brings the warm ones back to book a free consultation.</p>
+    <div class="eyebrow">MC | Madcraft 2.0 LinkedIn Plan | Nov 2026</div>
+    <h1>LinkedIn turns named-account visibility into qualified meetings.</h1>
+    <p class="lead">LinkedIn puts Madcraft in front of decision-makers at our named US target accounts, with Texas first, then brings the engaged ones back to book a free consultation and hands warm accounts to BD. Success is measured in qualified meetings and pipeline in Pipedrive, not clicks.</p>
     <div class="stats">
       <div class="stat"><b>$1,500</b><span>per month, about $50 a day</span></div>
-      <div class="stat"><b>2</b><span>campaigns: Account Reach + Retargeting</span></div>
+      <div class="stat"><b>4</b><span>acquisition offers</span></div>
       <div class="stat"><b>~750</b><span>named Tier 1 + 2 accounts</span></div>
-      <div class="stat"><b>Pipedrive</b><span>where results are measured</span></div>
+      <div class="stat"><b>1 owner</b><span>Lauren, accountable for the result</span></div>
     </div>
   </div>
 </div>
 
-<section id="glance">
+<section id="targets">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-num">01</div>
-      <h2>At a glance</h2>
+      <h2>Objective and provisional 90-day targets</h2>
+      <p>LinkedIn supports Madcraft's target of 6 qualified US meetings a week and about $250,000 in qualified pipeline a month. It won't carry that target alone; this is the contribution it's expected to make by Month 3 (Jan 9 to Feb 7).</p>
     </div>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr><th></th><th>Account Reach</th><th>Retargeting</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>Job</th><td>Get seen by the right people at named accounts</td><td>Turn warm visitors into booked consultations</td></tr>
-          <tr><th>Who</th><td>Tier 1 + 2 accounts (~750), 50 to 1,500 employees, Texas and Sun Belt</td><td>Anyone in the US who visited the site or watched half or more of our videos</td></tr>
-          <tr><th>Personas</th><td>Marketing Lead (CMO, VP, Director of Marketing), Operations Lead (Director of Ops, IT Director), Executive (Founder, CEO, COO)</td><td>Same people, now warm</td></tr>
-          <tr><th>Message</th><td>The business has evolved faster than its brand, website and systems. Lead offer: Integrated Brand &amp; Website Transformation</td><td>Proof + "Book a free consultation"</td></tr>
-          <tr><th>Ad styles</th><td>Short video, document ads, images</td><td>Images and video matched to the page they viewed</td></tr>
-          <tr><th>Clicks go to</th><td>The matching offer page: <a href="https://wearemadcraft.com/capabilities/strategy-brand/" target="_blank" rel="noopener">Strategy &amp; Brand</a> (brand + website), <a href="https://wearemadcraft.com/capabilities/enterprise-website-development/" target="_blank" rel="noopener">Enterprise Website Development</a>, <a href="https://wearemadcraft.com/capabilities/online-visibility/" target="_blank" rel="noopener">Online Visibility</a></td><td>The <a href="https://wearemadcraft.com/start-a-conversation/" target="_blank" rel="noopener">Start a Conversation</a> form</td></tr>
-          <tr><th>Budget</th><td>$25/day, about $750/month</td><td>$25/day, about $750/month</td></tr>
-        </tbody>
-      </table>
+    <div class="targets-big">
+      <div><b>1 to 2</b><span>qualified meetings a month, sourced or assisted by LinkedIn</span></div>
+      <div><b>1</b><span>sales-accepted opportunity a month</span></div>
+      <div><b>$50k+</b><span>qualified pipeline a month, about one opportunity at Madcraft's minimum engagement sizes</span></div>
     </div>
-    <div class="callout"><strong>What's different from last time:</strong> the old retargeting felt too top-of-funnel and too small. Now "be seen" and "book a call" are separate, and video viewers keep growing the Retargeting pool.</div>
+    <div class="callout"><strong>How these get confirmed:</strong> tracking is fixed in week one and the baseline is set by Fri Nov 27. Targets are then confirmed by offer at the Day 30 review. Reach, engagement and clicks are leading indicators only, not the final measure.</div>
   </div>
 </section>
 
-<section class="alt" id="run">
+<section class="alt" id="map">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-num">02</div>
-      <h2>What we're going to run</h2>
-      <p>Three messages, one per offer, shown first to cold decision-makers and then, for those who engage, a follow-up asking them to book a call.</p>
+      <h2>Who we target and what we offer them</h2>
+      <p>Two campaigns. <strong>Account Reach</strong> ($25/day) gets seen by decision-makers at named accounts. <strong>Retargeting</strong> ($25/day) turns engaged visitors into booked consultations. Last time retargeting was too top-of-funnel and too small; keeping "be seen" and "book a call" separate fixes that.</p>
     </div>
-    <div class="grid-3">
-      <div class="card">
-        <span class="tag">Headline offer</span>
-        <h3>Brand + website</h3>
-        <div class="msg"><em>Cold accounts see</em>"Your business has evolved faster than your brand and website. We transform both together." Image + video</div>
-        <div class="msg"><em>Warm visitors see</em>"Thinking about your brand and website? Talk to us about both in one free consultation."</div>
-      </div>
-      <div class="card">
-        <span class="tag">Offer 2</span>
-        <h3>Enterprise websites</h3>
-        <div class="msg"><em>Cold accounts see</em>"Has your website kept pace with your business?" Image + video</div>
-        <div class="msg"><em>Warm visitors see</em>"Book a free website consultation: see where your site stands and what to fix first."</div>
-      </div>
-      <div class="card">
-        <span class="tag">Offer 3</span>
-        <h3>Online visibility (search + AI)</h3>
-        <div class="msg"><em>Cold accounts see</em>"Your buyers are asking ChatGPT who to shortlist. Is your company in the answer?" Image + video</div>
-        <div class="msg"><em>Warm visitors see</em>"Find out where you show up on Google and AI search. Book a free consultation."</div>
-      </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Offer</th><th>Target buyer</th><th>Problem we lead with</th><th>Proof</th><th>Lands on</th></tr></thead>
+        <tbody>
+          <tr><th>Brand + website (headline offer)</th><td>CEO, Founder, CMO</td><td>The business has evolved faster than its brand and website</td><td><a href="https://wearemadcraft.com/our-work/mincon-branding-rebranding/" target="_blank" rel="noopener">Mincon</a> (branding)</td><td><a href="https://wearemadcraft.com/capabilities/strategy-brand/" target="_blank" rel="noopener">Strategy &amp; Brand</a></td></tr>
+          <tr><th>Enterprise Website Development</th><td>CMO, VP or Director of Marketing</td><td>The website doesn't generate qualified opportunities</td><td><a href="https://wearemadcraft.com/our-work/cad-journey-website-development/" target="_blank" rel="noopener">CAD Journey</a> (website)</td><td><a href="https://wearemadcraft.com/capabilities/enterprise-website-development/" target="_blank" rel="noopener">Enterprise Website Development</a></td></tr>
+          <tr><th>Online Visibility</th><td>CMO, VP Marketing, commercial leaders</td><td>The right buyers can't find us on Google or in AI answers</td><td>Results story from Content Team</td><td><a href="https://wearemadcraft.com/capabilities/online-visibility/" target="_blank" rel="noopener">Online Visibility</a></td></tr>
+          <tr><th>AI Workflow Transformation</th><td>COO, Director of Operations, IT Director</td><td>Too much manual work; unclear where AI creates value</td><td>Practical use cases from the AI lead</td><td><a href="https://wearemadcraft.com/capabilities/ai-workflow-transformation/" target="_blank" rel="noopener">AI Workflow Transformation</a></td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="extras">
-      <div class="extra">
-        <h3>Useful content, from Month 2</h3>
-        <p>Three content-plan articles run as document ads people can read in the feed: why B2B websites stop generating opportunities, when a business has outgrown its brand, and how buyers find suppliers through AI search.</p>
-      </div>
-      <div class="extra">
-        <h3>Proof, as soon as it's approved</h3>
-        <p>Case studies go into the Retargeting ads, so warm visitors see real work before they book. Two are already on the site: <a href="https://wearemadcraft.com/our-work/mincon-branding-rebranding/" target="_blank" rel="noopener">Mincon</a> (branding) and <a href="https://wearemadcraft.com/our-work/cad-journey-website-development/" target="_blank" rel="noopener">CAD Journey</a> (website).</p>
-      </div>
-      <div class="extra">
-        <h3>Sales follow-up</h3>
-        <p>Each week Megan gets the list of target companies engaging with these ads, so SDRs can call them while they're warm.</p>
-      </div>
-    </div>
-    <div class="callout"><strong>Launch set:</strong> 6 Account Reach ads + 3 Retargeting ads. Weakest ads get swapped every 2 weeks; a fresh round of creative every 4 to 6 weeks.</div>
+    <p class="note">Who: Tier 1 + 2 named accounts across the US, Texas weighted first, 50 to 1,500 employees. Retargeting goes to anyone in the US who visited the site or watched our videos. Every Retargeting ad ends on the <a href="https://wearemadcraft.com/start-a-conversation/" target="_blank" rel="noopener">Start a Conversation</a> form. Stronger proof (BlueScope, Leviat, BearCom, StoneOne, Zachry) is added as soon as permission is confirmed. Each week, the list of engaged target companies goes to BD for follow-up.</p>
   </div>
 </section>
 
@@ -288,10 +280,10 @@
     <div class="sec-head">
       <div class="sec-num">03</div>
       <h2>Example ads</h2>
-      <p>What the ads will say. Copy leads with the problem, uses US English, never says "agency" or "services", and stays general so it works with any image or video.</p>
+      <p>Problem-led, US English, never "agency" or "services", and written to work with any image or video.</p>
     </div>
     <div class="row-title"><h3>Account Reach</h3><span>Cold decision-makers: get noticed</span></div>
-    <div class="grid-3">
+    <div class="grid-3 grid-4">
       <div class="card">
         <span class="tag">Headline offer</span>
         <h3>Brand + website</h3>
@@ -300,22 +292,29 @@
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
       <div class="card">
-        <span class="tag">Offer 2</span>
-        <h3>Enterprise websites</h3>
+        <span class="tag">Offer</span>
+        <h3>Enterprise Website Development</h3>
         <div class="msg"><em>Intro text</em><q>If your sales team apologizes for the website, it's time. We plan, design and build enterprise websites that make complex offerings easy to buy.</q></div>
         <div class="msg"><em>Headline</em><q>Enterprise websites built for complex B2B</q></div>
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
       <div class="card">
-        <span class="tag">Offer 3</span>
-        <h3>Online visibility</h3>
+        <span class="tag">Offer</span>
+        <h3>Online Visibility</h3>
         <div class="msg"><em>Intro text</em><q>Your buyers are asking ChatGPT and Google who to shortlist. Is your company in the answer?</q></div>
         <div class="msg"><em>Headline</em><q>Be found on Google, Bing and ChatGPT</q></div>
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
+      <div class="card">
+        <span class="tag">Offer</span>
+        <h3>AI Workflow Transformation</h3>
+        <div class="msg"><em>Intro text</em><q>Too much of your team's week goes on work a system could do. We find the practical AI use cases worth starting with, and build them properly.</q></div>
+        <div class="msg"><em>Headline</em><q>Practical AI for real workflows</q></div>
+        <div class="msg"><em>Button</em>Learn more</div>
+      </div>
     </div>
-    <div class="row-title"><h3>Retargeting</h3><span>Warm visitors: book a call</span></div>
-    <div class="grid-3">
+    <div class="row-title"><h3>Retargeting</h3><span>Engaged visitors: book a call</span></div>
+    <div class="grid-3 grid-4">
       <div class="card">
         <span class="tag">Headline offer</span>
         <h3>Brand + website</h3>
@@ -324,183 +323,165 @@
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
       <div class="card">
-        <span class="tag">Offer 2</span>
-        <h3>Enterprise websites</h3>
+        <span class="tag">Offer</span>
+        <h3>Enterprise Website Development</h3>
         <div class="msg"><em>Intro text</em><q>You've seen our work. Let's talk about yours. Book a free website consultation with the Madcraft team.</q></div>
         <div class="msg"><em>Headline</em><q>Book a free website consultation</q></div>
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
       <div class="card">
-        <span class="tag">Offer 3</span>
-        <h3>Online visibility</h3>
+        <span class="tag">Offer</span>
+        <h3>Online Visibility</h3>
         <div class="msg"><em>Intro text</em><q>Find out where you show up and where you don't. Book a free online visibility consultation.</q></div>
         <div class="msg"><em>Headline</em><q>See how buyers find you today</q></div>
+        <div class="msg"><em>Button</em>Learn more</div>
+      </div>
+      <div class="card">
+        <span class="tag">Offer</span>
+        <h3>AI Workflow Transformation</h3>
+        <div class="msg"><em>Intro text</em><q>Wondering where AI could save your team real time? Book a free AI opportunity consultation.</q></div>
+        <div class="msg"><em>Headline</em><q>Book a free AI opportunity consultation</q></div>
         <div class="msg"><em>Button</em>Learn more</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="plan30">
+<section class="dark" id="plan">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <h2>30-day plan (Nov 10 to Dec 9)</h2>
-      <p>Goal: both campaigns live, tracking proven into Pipedrive, first two weeks of real numbers.</p>
-    </div>
-    <div class="weeks">
-      <div class="week">
-        <h3>Week 1: set up</h3>
-        <div class="when">Nov 10 to 13</div>
-        <ul class="checks">
-          <li>Check the LinkedIn Insight Tag and set up the "form submitted" conversion on Start a Conversation</li>
-          <li>Upload the Tier 1 + 2 company list, build website and exclusion audiences</li>
-          <li class="key">Retargeting live Fri Nov 13 if Shane's new video is ready, otherwise Fri Nov 20</li>
-        </ul>
-      </div>
-      <div class="week">
-        <h3>Week 2: launch</h3>
-        <div class="when">Nov 16 to 20</div>
-        <ul class="checks">
-          <li>Sign off ads: one set per offer, problem-led, US English, no "agency" or "services"</li>
-          <li>Test click from ad to Pipedrive</li>
-          <li class="key">Account Reach live Fri Nov 20</li>
-        </ul>
-      </div>
-      <div class="week">
-        <h3>Weeks 3 and 4: learn</h3>
-        <div class="when">Nov 23 to Dec 9</div>
-        <ul class="checks">
-          <li>Hands off for 7 days so LinkedIn can learn (Thanksgiving week, Nov 26, will be quiet)</li>
-          <li>First review: which ads and accounts are engaging, swap the weakest ad</li>
-          <li>Every week: send Megan the list of target accounts engaging with our ads, for follow-up</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="dark" id="plan90">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-num">05</div>
-      <h2>90-day plan (Nov 10 to Feb 7)</h2>
-      <p>Goal: LinkedIn spend follows the evidence, and we can show leadership the meetings it helped create.</p>
+      <h2>30, 60 and 90-day delivery plan</h2>
+      <p>Priority one is what we commit to. Priority two starts only once priority one is live and working. Everything else waits in the backlog.</p>
     </div>
     <div class="roadmap">
       <div class="phase now">
-        <div class="m">Month 1</div>
-        <h3>Launch</h3>
+        <span class="pill p1">Priority one</span>
+        <div class="m">Days 1 to 30</div>
+        <h3>Track and launch</h3>
         <div class="d">Nov 10 to Dec 9</div>
         <ul>
-          <li>Tracking + audiences built</li>
-          <li>Retargeting live Nov 13 to 20</li>
-          <li>Account Reach live Nov 20</li>
-          <li>Engaged accounts to Megan</li>
+          <li>Week one: Insight Tag, form conversion, UTMs and Pipedrive source fields checked end to end</li>
+          <li>Company list and exclusion audiences uploaded</li>
+          <li>Retargeting live Nov 13 to 20; Account Reach live Nov 20, all four offers</li>
+          <li>Baseline set by Nov 27</li>
+          <li>Weekly engaged-accounts list to BD</li>
         </ul>
       </div>
       <div class="phase">
-        <div class="m">Month 2</div>
+        <span class="pill p2">Priority two</span>
+        <div class="m">Days 31 to 60</div>
         <h3>Sharpen</h3>
         <div class="d">Dec 10 to Jan 8</div>
         <ul>
-          <li>Split Retargeting by offer</li>
-          <li>Document ads from articles</li>
-          <li>Pipedrive results to LinkedIn</li>
-          <li>Holiday pacing, Meta in sync</li>
+          <li>Split Retargeting by offer once each audience has 300+ people</li>
+          <li>Approved case studies added as proof</li>
+          <li>First two high-value content assets run as document ads</li>
+          <li>Pipedrive outcomes sent back to LinkedIn</li>
+          <li>Holiday pacing; aligned with Meta's January launch</li>
         </ul>
       </div>
       <div class="phase">
-        <div class="m">Month 3</div>
-        <h3>Scale</h3>
+        <span class="pill p2">Priority two</span>
+        <div class="m">Days 61 to 90</div>
+        <h3>Scale on pipeline</h3>
         <div class="d">Jan 9 to Feb 7</div>
         <ul>
-          <li>Budget follows the winner</li>
+          <li>Move budget to the offer producing qualified meetings, not clicks</li>
           <li>Fresh creative every 4 to 6 weeks</li>
-          <li>One Lead Gen Form test</li>
-          <li>90-day review Feb 5</li>
+          <li>90-day commercial review Feb 5: meetings, opportunities, pipeline by offer</li>
         </ul>
       </div>
     </div>
-    <div class="gates">
-      <div class="gate"><div class="dia"></div><div><b>Day 30 check</b><span>Both live, tracking proven</span></div></div>
-      <div class="gate"><div class="dia"></div><div><b>Day 60 check</b><span>300+ people per offer pool</span></div></div>
-      <div class="gate"><div class="dia"></div><div><b>Day 90 review</b><span>1 to 2 meetings a month</span></div></div>
-    </div>
-
     <div class="day60">
-      <h3>By Day 60 (Jan 8)</h3>
+      <h3>Backlog (not committed until the core is live and performing)</h3>
       <ul>
-        <li>Both campaigns running steadily, with budget eased over the holidays (Dec 21 to Jan 1) and back to full from Jan 4</li>
-        <li>The three content-plan articles live as document ads</li>
-        <li>About half of Tier 1 accounts have seen our ads</li>
-        <li>Retargeting split into two offer groups if each has 300+ people; if not, it stays as one ad set until they do</li>
-        <li>First consultation enquiries from LinkedIn, and a first cost per qualified meeting</li>
-        <li>Day 60 review: keep, change or cut each ad</li>
+        <li>LinkedIn Lead Gen Form test, only if website conversion is weak</li>
+        <li>Conversation Ads to Tier 1 accounts</li>
+        <li>Predictive or lookalike audiences beyond the named list</li>
+        <li>More budget, requested at Day 60 with evidence</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="alt" id="targets">
+<section class="alt" id="measure">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">06</div>
-      <h2>Targets</h2>
+      <div class="sec-num">05</div>
+      <h2>Measurement</h2>
+      <p>Pipedrive is the source of truth. LinkedIn's own numbers are directional.</p>
     </div>
-    <div class="proof-line">
-      <div><b>Day 30</b><span>We prove it works</span></div>
-      <div><b>Day 60</b><span>We prove it reaches the right companies</span></div>
-      <div><b>Day 90</b><span>We prove it helps create meetings</span></div>
+    <div class="grid-2">
+      <div class="box">
+        <h3>Weekly execution dashboard</h3>
+        <ul>
+          <li>Spend against budget</li>
+          <li>Share of Tier 1 accounts reached</li>
+          <li>Engaged target companies (sent to BD)</li>
+          <li>Consultation inquiries from LinkedIn</li>
+          <li>Ads swapped and why</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Monthly commercial report</h3>
+        <ul>
+          <li>Qualified meetings LinkedIn sourced or assisted</li>
+          <li>Sales-accepted opportunities and pipeline value, by offer</li>
+          <li>Cost per qualified meeting</li>
+          <li>What we're changing next month</li>
+        </ul>
+      </div>
     </div>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr><th>Measure</th><th>Day 30</th><th>Day 60</th><th>Day 90</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>Campaigns live, tracking tested</th><td>Done</td><td>Done</td><td>Done</td></tr>
-          <tr><th>Tier 1 accounts that have seen our ads</th><td>Baseline set</td><td>About 50%</td><td>70%</td></tr>
-          <tr><th>Retargeting pool</th><td>300+ people (LinkedIn's minimum to run)</td><td>300+ per offer group, or still one ad set</td><td>Growing</td></tr>
-          <tr><th>Consultation enquiries from LinkedIn</th><td>Tracking works</td><td>First enquiries in</td><td>Steady monthly flow, target set at Day 30</td></tr>
-          <tr><th>Qualified meetings LinkedIn sourced or helped</th><td>Counted from Megan's weekly report</td><td>Reported weekly</td><td>1 to 2 a month</td></tr>
-          <tr><th>Cost per qualified meeting (spend divided by meetings)</th><td>Too early</td><td>First number</td><td>Lower than Day 60</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Day 60 and Day 90 numbers are proposals, confirmed once we have 30 days of data.</p>
-    <div class="callout">LinkedIn supports the 6-meetings-a-week target rather than carrying it. Its biggest value is warming up accounts before Megan's team calls and emails them.</div>
+    <div class="callout"><strong>Attribution:</strong> every lead keeps its first touch, assisted touches, landing page, campaign, self-reported source ("How did you hear about us?") and offer, so LinkedIn's role isn't lost when another channel gets the last click.</div>
   </div>
 </section>
 
-<section id="asks">
+<section id="owners">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">07</div>
-      <h2>What I need from the team</h2>
+      <div class="sec-num">06</div>
+      <h2>Ownership and delivery</h2>
+      <p>Accountable owner: <strong>Lauren</strong>. If a review isn't returned within 24 hours, work goes ahead against the approved copy and targeting rules.</p>
     </div>
     <div class="table-scroll">
       <table>
-        <thead>
-          <tr><th>What</th><th>From</th><th>By</th></tr>
-        </thead>
+        <thead><tr><th>Item</th><th>Delivery owner</th><th>Due</th><th>Done when</th><th>Capacity needed (estimate)</th></tr></thead>
         <tbody>
-          <tr><td>Tier 1 + 2 company list (name + website)</td><td>Megan / Shane</td><td>Thu Nov 12</td></tr>
-          <tr><td>Short videos for the ads</td><td>Shane</td><td>Within 2 weeks of Nov 10</td></tr>
-          <tr><td>Thank-you page URL for the Start a Conversation form</td><td>Web / Performance Team</td><td>Wed Nov 11</td></tr>
-          <tr><td>"Free consultation" wording on the Start a Conversation page, so it matches the ads</td><td>Web Team</td><td>Fri Nov 13</td></tr>
-          <tr><td>Exclusion list: clients + open opportunities</td><td>Megan</td><td>Thu Nov 12</td></tr>
-          <tr><td>Weekly count of qualified meetings LinkedIn sourced or helped (or read access to Pipedrive)</td><td>Megan / Performance Team</td><td>Weekly from Nov 23</td></tr>
-          <tr><td>More case studies, to add proof to Retargeting ads</td><td>Content Team</td><td>As approved</td></tr>
+          <tr><td>Tracking: Insight Tag, form conversion, UTMs, Pipedrive source fields</td><td>Performance Team, with Lauren</td><td>Fri Nov 13</td><td>A test click shows up in Pipedrive with source, campaign and offer</td><td>Half a day</td></tr>
+          <tr><td>Thank-you page and "free consultation" wording on Start a Conversation</td><td>Web</td><td>Fri Nov 13</td><td>Page live and the conversion fires</td><td>2 to 3 hours</td></tr>
+          <tr><td>Tier 1 + 2 company list and exclusion list</td><td>BD (Megan)</td><td>Thu Nov 12</td><td>List uploaded and matched in LinkedIn</td><td>Already in the BD plan</td></tr>
+          <tr><td>Launch creative: 8 ads across four offers</td><td>Brand / Content, with Lauren</td><td>Wed Nov 18</td><td>Approved and uploaded</td><td>1 to 2 days per round, every 4 to 6 weeks</td></tr>
+          <tr><td>Short videos</td><td>Shane</td><td>Within 2 weeks of Nov 10</td><td>Delivered in square and vertical sizes</td><td>2 to 4 videos</td></tr>
+          <tr><td>Campaign build and launch</td><td>Lauren</td><td>Fri Nov 20</td><td>Both campaigns live, delivering, within budget</td><td>Lauren</td></tr>
+          <tr><td>Weekly engaged-accounts list and meeting count</td><td>Lauren to BD; BD back to Lauren</td><td>Weekly from Nov 23</td><td>List sent every Monday; meeting count received</td><td>About 30 minutes a week each</td></tr>
+          <tr><td>Approved proof (case study permissions)</td><td>Content Team</td><td>By Dec 10</td><td>At least two approved case studies in Retargeting</td><td>Depends on client approvals</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="decisions">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">07</div>
+      <h2>Decisions needed from leadership</h2>
+      <p>Each comes with a recommended answer.</p>
+    </div>
+    <div class="decisions">
+      <div class="decision"><h3>Geography</h3><p><b>Recommend:</b> target the named accounts wherever they are in the US, with Texas weighted first. Retargeting stays US-wide.</p></div>
+      <div class="decision"><h3>The old Madcraft retargeting</h3><p><b>Recommend:</b> pause it and replace it with this plan, so total LinkedIn spend stays at $1,500 a month. Its audiences are kept.</p></div>
+      <div class="decision"><h3>AI Workflow Transformation</h3><p><b>Recommend:</b> include it from launch as the fourth offer, since it's already live and being promoted.</p></div>
+      <div class="decision"><h3>Landing page for the brand + website offer</h3><p><b>Recommend:</b> use Strategy &amp; Brand for now. Web builds a dedicated page as priority two.</p></div>
+      <div class="decision"><h3>Who sends Pipedrive outcomes back to LinkedIn</h3><p><b>Recommend:</b> the Performance Team owns it, and Lauren checks it weekly.</p></div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>Madcraft 2.0 | LinkedIn 30 + 90 Day Plan | Nov 2026</span>
+    <span>Madcraft 2.0 | LinkedIn Plan | Nov 2026</span>
     <span>Paid Social</span>
   </div>
 </footer>
